@@ -1,0 +1,498 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       10/May/2018  08:55:43
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\uCOS-III\Source\os_var.c
+#    Command line =  
+#        "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\uCOS-III\Source\os_var.c"
+#        -D USE_STDPERIPH_DRIVER -lCN "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List"
+#        -o "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.3\arm\INC\c\DLib_Config_Normal.h" -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\OS\uCOS-III\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\ST\STM32\inc\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-LIB\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Source\"
+#        -On --use_c++_inline
+#    List file    =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List\os_var.lst
+#    Object file  =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj\os_var.o
+#
+###############################################################################
+
+F:\iar\001 backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\uCOS-III\Source\os_var.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2012; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                      VARIABLES
+     10          *
+     11          * File    : OS_VAR.C
+     12          * By      : JJL
+     13          * Version : V3.03.01
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #define   OS_GLOBALS
+     34          
+     35          #define  MICRIUM_SOURCE
+     36          #include <os.h>
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_APP_HOOK_TCB OS_AppTaskCreateHookPtr
+   \                     OS_AppTaskCreateHookPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_APP_HOOK_TCB OS_AppTaskDelHookPtr
+   \                     OS_AppTaskDelHookPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_APP_HOOK_TCB OS_AppTaskReturnHookPtr
+   \                     OS_AppTaskReturnHookPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute void (*)(void) OS_AppIdleTaskHookPtr
+   \                     OS_AppIdleTaskHookPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute void (*)(void) OS_AppStatTaskHookPtr
+   \                     OS_AppStatTaskHookPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute void (*)(void) OS_AppTaskSwHookPtr
+   \                     OS_AppTaskSwHookPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute void (*)(void) OS_AppTimeTickHookPtr
+   \                     OS_AppTimeTickHookPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_INT32U OSIdleTaskCtr
+   \                     OSIdleTaskCtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TCB OSIdleTaskTCB
+   \                     OSIdleTaskTCB:
+   \   00000000                      DS8 200
+
+   \                                 In section .bss, align 1
+   \   __absolute CPU_INT08U OSIntNestingCtr
+   \                     OSIntNestingCtr:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_TS OSIntDisTimeMax
+   \                     OSIntDisTimeMax:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 1
+   \   __absolute OS_STATE OSRunning
+   \                     OSRunning:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_INT_Q *OSIntQInPtr
+   \                     OSIntQInPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_INT_Q *OSIntQOutPtr
+   \                     OSIntQOutPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSIntQNbrEntries
+   \                     OSIntQNbrEntries:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSIntQNbrEntriesMax
+   \                     OSIntQNbrEntriesMax:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSIntQOvfCtr
+   \                     OSIntQOvfCtr:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TCB OSIntQTaskTCB
+   \                     OSIntQTaskTCB:
+   \   00000000                      DS8 200
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_TS OSIntQTaskTimeMax
+   \                     OSIntQTaskTimeMax:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_FLAG_GRP *OSFlagDbgListPtr
+   \                     OSFlagDbgListPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSFlagQty
+   \                     OSFlagQty:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_MEM *OSMemDbgListPtr
+   \                     OSMemDbgListPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSMemQty
+   \                     OSMemQty:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_MSG_POOL OSMsgPool
+   \                     OSMsgPool:
+   \   00000000                      DS8 12
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_MUTEX *OSMutexDbgListPtr
+   \                     OSMutexDbgListPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSMutexQty
+   \                     OSMutexQty:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 1
+   \   __absolute OS_PRIO OSPrioCur
+   \                     OSPrioCur:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+   \   __absolute OS_PRIO OSPrioHighRdy
+   \                     OSPrioHighRdy:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 1
+   \   __absolute OS_PRIO OSPrioSaved
+   \                     OSPrioSaved:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_Q *OSQDbgListPtr
+   \                     OSQDbgListPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSQQty
+   \                     OSQQty:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_RDY_LIST OSRdyList[32]
+   \                     OSRdyList:
+   \   00000000                      DS8 384
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_TS_TMR OSSchedLockTimeBegin
+   \                     OSSchedLockTimeBegin:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_TS_TMR OSSchedLockTimeMax
+   \                     OSSchedLockTimeMax:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_TS_TMR OSSchedLockTimeMaxCur
+   \                     OSSchedLockTimeMaxCur:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 1
+   \   __absolute CPU_INT08U OSSchedLockNestingCtr
+   \                     OSSchedLockNestingCtr:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TICK OSSchedRoundRobinDfltTimeQuanta
+   \                     OSSchedRoundRobinDfltTimeQuanta:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 1
+   \   __absolute CPU_BOOLEAN OSSchedRoundRobinEn
+   \                     OSSchedRoundRobinEn:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_SEM *OSSemDbgListPtr
+   \                     OSSemDbgListPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSSemQty
+   \                     OSSemQty:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 1
+   \   __absolute CPU_BOOLEAN OSStatResetFlag
+   \                     OSStatResetFlag:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 2
+   \   __absolute CPU_INT16U OSStatTaskCPUUsage
+   \                     OSStatTaskCPUUsage:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 2
+   \   __absolute CPU_INT16U OSStatTaskCPUUsageMax
+   \                     OSStatTaskCPUUsageMax:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TICK OSStatTaskCtr
+   \                     OSStatTaskCtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TICK OSStatTaskCtrMax
+   \                     OSStatTaskCtrMax:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TICK OSStatTaskCtrRun
+   \                     OSStatTaskCtrRun:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 1
+   \   __absolute CPU_BOOLEAN OSStatTaskRdy
+   \                     OSStatTaskRdy:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TCB OSStatTaskTCB
+   \                     OSStatTaskTCB:
+   \   00000000                      DS8 200
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_TS OSStatTaskTimeMax
+   \                     OSStatTaskTimeMax:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_INT32U OSTaskCtxSwCtr
+   \                     OSTaskCtxSwCtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TCB *OSTaskDbgListPtr
+   \                     OSTaskDbgListPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSTaskQty
+   \                     OSTaskQty:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 1
+   \   __absolute OS_REG_ID OSTaskRegNextAvailID
+   \                     OSTaskRegNextAvailID:
+   \   00000000                      DS8 1
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TICK OSTickCtr
+   \                     OSTickCtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TCB OSTickTaskTCB
+   \                     OSTickTaskTCB:
+   \   00000000                      DS8 200
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_TS OSTickTaskTimeMax
+   \                     OSTickTaskTimeMax:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TMR *OSTmrDbgListPtr
+   \                     OSTmrDbgListPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 2
+   \   __absolute OS_OBJ_QTY OSTmrQty
+   \                     OSTmrQty:
+   \   00000000                      DS8 2
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TCB OSTmrTaskTCB
+   \                     OSTmrTaskTCB:
+   \   00000000                      DS8 200
+
+   \                                 In section .bss, align 4
+   \   __absolute CPU_TS OSTmrTaskTimeMax
+   \                     OSTmrTaskTimeMax:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TICK OSTmrTickCtr
+   \                     OSTmrTickCtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_CTR OSTmrUpdateCnt
+   \                     OSTmrUpdateCnt:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_CTR OSTmrUpdateCtr
+   \                     OSTmrUpdateCtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TCB *OSTCBCurPtr
+   \                     OSTCBCurPtr:
+   \   00000000                      DS8 4
+
+   \                                 In section .bss, align 4
+   \   __absolute OS_TCB *OSTCBHighRdyPtr
+   \                     OSTCBHighRdyPtr:
+   \   00000000                      DS8 4
+     37          
+     38          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     39          const  CPU_CHAR  *os_var__c = "$Id: $";
+     40          #endif
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  OSFlagDbgListPtr
+       2  OSFlagQty
+       4  OSIdleTaskCtr
+     200  OSIdleTaskTCB
+       4  OSIntDisTimeMax
+       1  OSIntNestingCtr
+       4  OSIntQInPtr
+       2  OSIntQNbrEntries
+       2  OSIntQNbrEntriesMax
+       4  OSIntQOutPtr
+       2  OSIntQOvfCtr
+     200  OSIntQTaskTCB
+       4  OSIntQTaskTimeMax
+       4  OSMemDbgListPtr
+       2  OSMemQty
+      12  OSMsgPool
+       4  OSMutexDbgListPtr
+       2  OSMutexQty
+       1  OSPrioCur
+       1  OSPrioHighRdy
+       1  OSPrioSaved
+       4  OSQDbgListPtr
+       2  OSQQty
+     384  OSRdyList
+       1  OSRunning
+       1  OSSchedLockNestingCtr
+       4  OSSchedLockTimeBegin
+       4  OSSchedLockTimeMax
+       4  OSSchedLockTimeMaxCur
+       4  OSSchedRoundRobinDfltTimeQuanta
+       1  OSSchedRoundRobinEn
+       4  OSSemDbgListPtr
+       2  OSSemQty
+       1  OSStatResetFlag
+       2  OSStatTaskCPUUsage
+       2  OSStatTaskCPUUsageMax
+       4  OSStatTaskCtr
+       4  OSStatTaskCtrMax
+       4  OSStatTaskCtrRun
+       1  OSStatTaskRdy
+     200  OSStatTaskTCB
+       4  OSStatTaskTimeMax
+       4  OSTCBCurPtr
+       4  OSTCBHighRdyPtr
+       4  OSTaskCtxSwCtr
+       4  OSTaskDbgListPtr
+       2  OSTaskQty
+       1  OSTaskRegNextAvailID
+       4  OSTickCtr
+     200  OSTickTaskTCB
+       4  OSTickTaskTimeMax
+       4  OSTmrDbgListPtr
+       2  OSTmrQty
+     200  OSTmrTaskTCB
+       4  OSTmrTaskTimeMax
+       4  OSTmrTickCtr
+       4  OSTmrUpdateCnt
+       4  OSTmrUpdateCtr
+       4  OS_AppIdleTaskHookPtr
+       4  OS_AppStatTaskHookPtr
+       4  OS_AppTaskCreateHookPtr
+       4  OS_AppTaskDelHookPtr
+       4  OS_AppTaskReturnHookPtr
+       4  OS_AppTaskSwHookPtr
+       4  OS_AppTimeTickHookPtr
+
+ 
+ 1 574 bytes in section .bss
+ 
+ 1 574 bytes of DATA memory
+
+Errors: none
+Warnings: none

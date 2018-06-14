@@ -1,0 +1,333 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       10/May/2018  08:55:42
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\uCOS-III\Source\os_prio.c
+#    Command line =  
+#        "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\uCOS-III\Source\os_prio.c"
+#        -D USE_STDPERIPH_DRIVER -lCN "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List"
+#        -o "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.3\arm\INC\c\DLib_Config_Normal.h" -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\OS\uCOS-III\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\ST\STM32\inc\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-LIB\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Source\"
+#        -On --use_c++_inline
+#    List file    =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List\os_prio.lst
+#    Object file  =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj\os_prio.o
+#
+###############################################################################
+
+F:\iar\001 backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\uCOS-III\Source\os_prio.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                      uC/OS-III
+      4          *                                                 The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2012; Micrium, Inc.; Weston, FL
+      7          *                           All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                 PRIORITY MANAGEMENT
+     10          *
+     11          * File    : OS_PRIO.C
+     12          * By      : JJL
+     13          * Version : V3.03.01
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *           uC/OS-III is provided in source form for FREE short-term evaluation, for educational use or 
+     18          *           for peaceful research.  If you plan or intend to use uC/OS-III in a commercial application/
+     19          *           product then, you need to contact Micrium to properly license uC/OS-III for its use in your 
+     20          *           application/product.   We provide ALL the source code for your convenience and to help you 
+     21          *           experience uC/OS-III.  The fact that the source is provided does NOT mean that you can use 
+     22          *           it commercially without paying a licensing fee.
+     23          *
+     24          *           Knowledge of the source code may NOT be used to develop a similar product.
+     25          *
+     26          *           Please help us continue to provide the embedded community with the finest software available.
+     27          *           Your honesty is greatly appreciated.
+     28          *
+     29          *           You can contact us at www.micrium.com, or by phone at +1 (954) 217-2036.
+     30          ************************************************************************************************************************
+     31          */
+     32          
+     33          #define  MICRIUM_SOURCE
+     34          #include <os.h>
+     35          
+     36          #ifdef VSC_INCLUDE_SOURCE_FILE_NAMES
+     37          const  CPU_CHAR  *os_prio__c = "$Id: $";
+     38          #endif
+     39          
+     40          
+
+   \                                 In section .bss, align 4
+     41          CPU_DATA   OSPrioTbl[OS_PRIO_TBL_SIZE];                     /* Declare the array local to this file to allow for  ... */
+   \                     OSPrioTbl:
+   \   00000000                      DS8 4
+     42                                                                      /* ... optimization.  In other words, this allows the ... */
+     43                                                                      /* ... table to be located in fast memory                 */
+     44          
+     45          /*
+     46          ************************************************************************************************************************
+     47          *                                               INITIALIZE THE PRIORITY LIST
+     48          *
+     49          * Description: This function is called by uC/OS-III to initialize the list of ready priorities.
+     50          *
+     51          * Arguments  : none
+     52          *
+     53          * Returns    : none
+     54          *
+     55          * Note       : This function is INTERNAL to uC/OS-III and your application should not call it.
+     56          ************************************************************************************************************************
+     57          */
+     58          
+
+   \                                 In section .text, align 2, keep-with-next
+     59          void  OS_PrioInit (void)
+     60          {
+     61              CPU_DATA  i;
+     62          
+     63          
+     64                                                                      /* Clear the bitmap table ... no task is ready            */
+     65              for (i = 0u; i < OS_PRIO_TBL_SIZE; i++) {
+   \                     OS_PrioInit: (+1)
+   \   00000000   0x2100             MOVS     R1,#+0
+   \   00000002   0x0008             MOVS     R0,R1
+   \                     ??OS_PrioInit_0: (+1)
+   \   00000004   0x2800             CMP      R0,#+0
+   \   00000006   0xD105             BNE.N    ??OS_PrioInit_1
+     66                   OSPrioTbl[i] = (CPU_DATA)0;
+   \   00000008   0x2100             MOVS     R1,#+0
+   \   0000000A   0x....             LDR.N    R2,??DataTable3
+   \   0000000C   0xF842 0x1020      STR      R1,[R2, R0, LSL #+2]
+     67              }
+   \   00000010   0x1C40             ADDS     R0,R0,#+1
+   \   00000012   0xE7F7             B.N      ??OS_PrioInit_0
+     68          }
+   \                     ??OS_PrioInit_1: (+1)
+   \   00000014   0x4770             BX       LR               ;; return
+     69          
+     70          /*
+     71          ************************************************************************************************************************
+     72          *                                           GET HIGHEST PRIORITY TASK WAITING
+     73          *
+     74          * Description: This function is called by other uC/OS-III services to determine the highest priority task
+     75          *              waiting on the event.
+     76          *
+     77          * Arguments  : none
+     78          *
+     79          * Returns    : The priority of the Highest Priority Task (HPT) waiting for the event
+     80          *
+     81          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+     82          ************************************************************************************************************************
+     83          */
+     84          
+
+   \                                 In section .text, align 2, keep-with-next
+     85          OS_PRIO  OS_PrioGetHighest (void)
+     86          {
+   \                     OS_PrioGetHighest: (+1)
+   \   00000000   0xB538             PUSH     {R3-R5,LR}
+     87              CPU_DATA  *p_tbl;
+     88              OS_PRIO    prio;
+     89          
+     90          
+     91              prio  = (OS_PRIO)0;
+   \   00000002   0x2000             MOVS     R0,#+0
+   \   00000004   0x0005             MOVS     R5,R0
+     92              p_tbl = &OSPrioTbl[0];
+   \   00000006   0x....             LDR.N    R0,??DataTable3
+   \   00000008   0x0004             MOVS     R4,R0
+     93              while (*p_tbl == (CPU_DATA)0) {                         /* Search the bitmap table for the highest priority       */
+   \                     ??OS_PrioGetHighest_0: (+1)
+   \   0000000A   0x6820             LDR      R0,[R4, #+0]
+   \   0000000C   0x2800             CMP      R0,#+0
+   \   0000000E   0xD102             BNE.N    ??OS_PrioGetHighest_1
+     94                  prio += DEF_INT_CPU_NBR_BITS;                       /* Compute the step of each CPU_DATA entry                */
+   \   00000010   0x3520             ADDS     R5,R5,#+32
+     95                  p_tbl++;
+   \   00000012   0x1D24             ADDS     R4,R4,#+4
+   \   00000014   0xE7F9             B.N      ??OS_PrioGetHighest_0
+     96              }
+     97              prio += (OS_PRIO)CPU_CntLeadZeros(*p_tbl);              /* Find the position of the first bit set at the entry    */
+   \                     ??OS_PrioGetHighest_1: (+1)
+   \   00000016   0x6820             LDR      R0,[R4, #+0]
+   \   00000018   0x.... 0x....      BL       CPU_CntLeadZeros
+   \   0000001C   0x1940             ADDS     R0,R0,R5
+   \   0000001E   0x0005             MOVS     R5,R0
+     98              return (prio);
+   \   00000020   0x0028             MOVS     R0,R5
+   \   00000022   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000024   0xBD32             POP      {R1,R4,R5,PC}    ;; return
+     99          }
+    100          
+    101          /*
+    102          ************************************************************************************************************************
+    103          *                                                  INSERT PRIORITY
+    104          *
+    105          * Description: This function is called to insert a priority in the priority table.
+    106          *
+    107          * Arguments  : prio     is the priority to insert
+    108          *
+    109          * Returns    : none
+    110          *
+    111          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    112          ************************************************************************************************************************
+    113          */
+    114          
+
+   \                                 In section .text, align 2, keep-with-next
+    115          void  OS_PrioInsert (OS_PRIO  prio)
+    116          {
+   \                     OS_PrioInsert: (+1)
+   \   00000000   0xB430             PUSH     {R4,R5}
+    117              CPU_DATA  bit;
+    118              CPU_DATA  bit_nbr;
+    119              OS_PRIO   ix;
+    120          
+    121          
+    122              ix             = prio / DEF_INT_CPU_NBR_BITS;
+   \   00000002   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000004   0x0944             LSRS     R4,R0,#+5
+   \   00000006   0x0023             MOVS     R3,R4
+    123              bit_nbr        = (CPU_DATA)prio & (DEF_INT_CPU_NBR_BITS - 1u);
+   \   00000008   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000000A   0xF010 0x041F      ANDS     R4,R0,#0x1F
+   \   0000000E   0x0022             MOVS     R2,R4
+    124              bit            = 1u;
+   \   00000010   0x2401             MOVS     R4,#+1
+   \   00000012   0x0021             MOVS     R1,R4
+    125              bit          <<= (DEF_INT_CPU_NBR_BITS - 1u) - bit_nbr;
+   \   00000014   0xF1D2 0x041F      RSBS     R4,R2,#+31
+   \   00000018   0x40A1             LSLS     R1,R1,R4
+    126              OSPrioTbl[ix] |= bit;
+   \   0000001A   0x....             LDR.N    R4,??DataTable3
+   \   0000001C   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   0000001E   0xF854 0x4023      LDR      R4,[R4, R3, LSL #+2]
+   \   00000022   0x430C             ORRS     R4,R1,R4
+   \   00000024   0x....             LDR.N    R5,??DataTable3
+   \   00000026   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   00000028   0xF845 0x4023      STR      R4,[R5, R3, LSL #+2]
+    127          }
+   \   0000002C   0xBC30             POP      {R4,R5}
+   \   0000002E   0x4770             BX       LR               ;; return
+    128          
+    129          /*
+    130          ************************************************************************************************************************
+    131          *                                                   REMOVE PRIORITY
+    132          *
+    133          * Description: This function is called to remove a priority in the priority table.
+    134          *
+    135          * Arguments  : prio     is the priority to remove
+    136          *
+    137          * Returns    : none
+    138          *
+    139          * Note(s)    : 1) This function is INTERNAL to uC/OS-III and your application MUST NOT call it.
+    140          ************************************************************************************************************************
+    141          */
+    142          
+
+   \                                 In section .text, align 2, keep-with-next
+    143          void  OS_PrioRemove (OS_PRIO  prio)
+    144          {
+   \                     OS_PrioRemove: (+1)
+   \   00000000   0xB430             PUSH     {R4,R5}
+    145              CPU_DATA  bit;
+    146              CPU_DATA  bit_nbr;
+    147              OS_PRIO   ix;
+    148          
+    149          
+    150              ix             = prio / DEF_INT_CPU_NBR_BITS;
+   \   00000002   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   00000004   0x0944             LSRS     R4,R0,#+5
+   \   00000006   0x0023             MOVS     R3,R4
+    151              bit_nbr        = (CPU_DATA)prio & (DEF_INT_CPU_NBR_BITS - 1u);
+   \   00000008   0xB2C0             UXTB     R0,R0            ;; ZeroExt  R0,R0,#+24,#+24
+   \   0000000A   0xF010 0x041F      ANDS     R4,R0,#0x1F
+   \   0000000E   0x0022             MOVS     R2,R4
+    152              bit            = 1u;
+   \   00000010   0x2401             MOVS     R4,#+1
+   \   00000012   0x0021             MOVS     R1,R4
+    153              bit          <<= (DEF_INT_CPU_NBR_BITS - 1u) - bit_nbr;
+   \   00000014   0xF1D2 0x041F      RSBS     R4,R2,#+31
+   \   00000018   0x40A1             LSLS     R1,R1,R4
+    154              OSPrioTbl[ix] &= ~bit;
+   \   0000001A   0x....             LDR.N    R4,??DataTable3
+   \   0000001C   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   0000001E   0xF854 0x4023      LDR      R4,[R4, R3, LSL #+2]
+   \   00000022   0x438C             BICS     R4,R4,R1
+   \   00000024   0x....             LDR.N    R5,??DataTable3
+   \   00000026   0xB2DB             UXTB     R3,R3            ;; ZeroExt  R3,R3,#+24,#+24
+   \   00000028   0xF845 0x4023      STR      R4,[R5, R3, LSL #+2]
+    155          }
+   \   0000002C   0xBC30             POP      {R4,R5}
+   \   0000002E   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable3:
+   \   00000000   0x........         DC32     OSPrioTbl
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+      16   OS_PrioGetHighest
+        16   -> CPU_CntLeadZeros
+       0   OS_PrioInit
+       8   OS_PrioInsert
+       8   OS_PrioRemove
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable3
+       4  OSPrioTbl
+      38  OS_PrioGetHighest
+      22  OS_PrioInit
+      48  OS_PrioInsert
+      48  OS_PrioRemove
+
+ 
+   4 bytes in section .bss
+ 160 bytes in section .text
+ 
+ 160 bytes of CODE memory
+   4 bytes of DATA memory
+
+Errors: none
+Warnings: none

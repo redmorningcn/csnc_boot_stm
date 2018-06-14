@@ -1,0 +1,494 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       10/May/2018  08:55:40
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\app.c
+#    Command line =  
+#        "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\app.c"
+#        -D USE_STDPERIPH_DRIVER -lCN "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List"
+#        -o "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.3\arm\INC\c\DLib_Config_Normal.h" -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\OS\uCOS-III\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\ST\STM32\inc\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-LIB\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Source\"
+#        -On --use_c++_inline
+#    List file    =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List\app.lst
+#    Object file  =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj\app.o
+#
+###############################################################################
+
+F:\iar\001 backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\app.c
+      1          /*
+      2          *********************************************************************************************************
+      3          *                                              EXAMPLE CODE
+      4          *
+      5          *                          (c) Copyright 2003-2013; Micrium, Inc.; Weston, FL
+      6          *
+      7          *               All rights reserved.  Protected by international copyright laws.
+      8          *               Knowledge of the source code may NOT be used to develop a similar product.
+      9          *               Please help us continue to provide the Embedded community with the finest
+     10          *               software available.  Your honesty is greatly appreciated.
+     11          *********************************************************************************************************
+     12          */
+     13          
+     14          /*
+     15          *********************************************************************************************************
+     16          *
+     17          *                                            EXAMPLE CODE
+     18          *
+     19          *                                     ST Microelectronics STM32
+     20          *                                              on the
+     21          *
+     22          *                                     Micrium uC-Eval-STM32F107
+     23          *                                        Evaluation Board
+     24          *
+     25          * Filename      : app.c
+     26          * Version       : V1.00
+     27          * Programmer(s) : EHS
+     28          *                 DC
+     29          *********************************************************************************************************
+     30          */
+     31          
+     32          /*
+     33          *********************************************************************************************************
+     34          *                                             INCLUDE FILES
+     35          *********************************************************************************************************
+     36          */
+     37          
+     38          #include <includes.h>
+     39          
+     40          
+     41          /*
+     42          *********************************************************************************************************
+     43          *                                            LOCAL DEFINES
+     44          *********************************************************************************************************
+     45          */
+     46          
+     47          /*
+     48          *********************************************************************************************************
+     49          *                                                 TCB
+     50          *********************************************************************************************************
+     51          */
+     52          
+
+   \                                 In section .bss, align 4
+     53          static  OS_TCB   AppTaskStartTCB;
+   \                     AppTaskStartTCB:
+   \   00000000                      DS8 200
+     54          
+     55          
+     56          /*
+     57          *********************************************************************************************************
+     58          *                                                STACKS
+     59          *********************************************************************************************************
+     60          */
+     61          
+
+   \                                 In section .bss, align 4
+     62          static  CPU_STK  AppTaskStartStk[APP_TASK_START_STK_SIZE];
+   \                     AppTaskStartStk:
+   \   00000000                      DS8 512
+     63          
+     64          
+     65          /*
+     66          *********************************************************************************************************
+     67          *                                         FUNCTION PROTOTYPES
+     68          *********************************************************************************************************
+     69          */
+     70          
+     71          static  void  AppTaskCreate (void);
+     72          static  void  AppObjCreate  (void);
+     73          static  void  AppTaskStart  (void *p_arg);
+     74          
+     75          
+     76          /*
+     77          *********************************************************************************************************
+     78          *                                                main()
+     79          *
+     80          * Description : This is the standard entry point for C code.  It is assumed that your code will call
+     81          *               main() once you have performed all necessary initialization.
+     82          *
+     83          * Arguments   : none
+     84          *
+     85          * Returns     : none
+     86          *********************************************************************************************************
+     87          */
+     88          
+
+   \                                 In section .text, align 2, keep-with-next
+     89          int  main (void)
+     90          {
+   \                     main: (+1)
+   \   00000000   0xB500             PUSH     {LR}
+   \   00000002   0xB08B             SUB      SP,SP,#+44
+     91              OS_ERR  err;
+     92          
+     93          
+     94              BSP_IntDisAll();                                            /* Disable all interrupts.                              */
+   \   00000004   0x.... 0x....      BL       BSP_IntDisAll
+     95          
+     96              OSInit(&err);                                               /* Init uC/OS-III.                                      */
+   \   00000008   0xA809             ADD      R0,SP,#+36
+   \   0000000A   0x.... 0x....      BL       OSInit
+     97          
+     98              OSTaskCreate((OS_TCB     *)&AppTaskStartTCB,                /* Create the start task                                */
+     99                           (CPU_CHAR   *)"App Task Start",
+    100                           (OS_TASK_PTR ) AppTaskStart,
+    101                           (void       *) 0,
+    102                           (OS_PRIO     ) APP_TASK_START_PRIO,
+    103                           (CPU_STK    *)&AppTaskStartStk[0],
+    104                           (CPU_STK_SIZE) APP_TASK_START_STK_SIZE / 10,
+    105                           (CPU_STK_SIZE) APP_TASK_START_STK_SIZE,
+    106                           (OS_MSG_QTY  ) 5u,
+    107                           (OS_TICK     ) 0u,
+    108                           (void       *) 0,
+    109                           (OS_OPT      )(OS_OPT_TASK_STK_CHK | OS_OPT_TASK_STK_CLR),
+    110                           (OS_ERR     *)&err);
+   \   0000000E   0xA809             ADD      R0,SP,#+36
+   \   00000010   0x9008             STR      R0,[SP, #+32]
+   \   00000012   0x2003             MOVS     R0,#+3
+   \   00000014   0x9007             STR      R0,[SP, #+28]
+   \   00000016   0x2000             MOVS     R0,#+0
+   \   00000018   0x9006             STR      R0,[SP, #+24]
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \   0000001C   0x9005             STR      R0,[SP, #+20]
+   \   0000001E   0x2005             MOVS     R0,#+5
+   \   00000020   0x9004             STR      R0,[SP, #+16]
+   \   00000022   0x2080             MOVS     R0,#+128
+   \   00000024   0x9003             STR      R0,[SP, #+12]
+   \   00000026   0x200C             MOVS     R0,#+12
+   \   00000028   0x9002             STR      R0,[SP, #+8]
+   \   0000002A   0x....             LDR.N    R0,??DataTable1
+   \   0000002C   0x9001             STR      R0,[SP, #+4]
+   \   0000002E   0x2002             MOVS     R0,#+2
+   \   00000030   0x9000             STR      R0,[SP, #+0]
+   \   00000032   0x2300             MOVS     R3,#+0
+   \   00000034   0x.... 0x....      ADR.W    R2,AppTaskStart
+   \   00000038   0x....             LDR.N    R1,??DataTable1_1
+   \   0000003A   0x....             LDR.N    R0,??DataTable1_2
+   \   0000003C   0x.... 0x....      BL       OSTaskCreate
+    111          
+    112              OSStart(&err);                                              /* Start multitasking (i.e. give control to uC/OS-III). */
+   \   00000040   0xA809             ADD      R0,SP,#+36
+   \   00000042   0x.... 0x....      BL       OSStart
+    113          }
+   \   00000046   0x2000             MOVS     R0,#+0
+   \   00000048   0xB00B             ADD      SP,SP,#+44
+   \   0000004A   0xBD00             POP      {PC}             ;; return
+    114          
+    115          
+    116          /*
+    117          *********************************************************************************************************
+    118          *                                          STARTUP TASK
+    119          *
+    120          * Description : This is an example of a startup task.  As mentioned in the book's text, you MUST
+    121          *               initialize the ticker only once multitasking has started.
+    122          *
+    123          * Arguments   : p_arg   is the argument passed to 'AppTaskStart()' by 'OSTaskCreate()'.
+    124          *
+    125          * Returns     : none
+    126          *
+    127          * Notes       : 1) The first line of code is used to prevent a compiler warning because 'p_arg' is not
+    128          *                  used.  The compiler should not generate any code for this statement.
+    129          *********************************************************************************************************
+    130          */
+    131          
+
+   \                                 In section .text, align 4, keep-with-next
+    132          static  void  AppTaskStart (void *p_arg)
+    133          {
+   \                     AppTaskStart: (+1)
+   \   00000000   0xB570             PUSH     {R4-R6,LR}
+   \   00000002   0xB084             SUB      SP,SP,#+16
+   \   00000004   0x0004             MOVS     R4,R0
+    134              CPU_INT32U  cpu_clk_freq;
+    135              CPU_INT32U  cnts;
+    136              OS_ERR      err;
+    137          
+    138          
+    139             (void)p_arg;
+    140          
+    141              BSP_Init();                                                 /* Initialize BSP functions                             */
+   \   00000006   0x.... 0x....      BL       BSP_Init
+    142              CPU_Init();
+   \   0000000A   0x.... 0x....      BL       CPU_Init
+    143          
+    144              cpu_clk_freq = BSP_CPU_ClkFreq();                           /* Determine SysTick reference freq.                    */
+   \   0000000E   0x.... 0x....      BL       BSP_CPU_ClkFreq
+   \   00000012   0x0005             MOVS     R5,R0
+    145              cnts = cpu_clk_freq / (CPU_INT32U)OSCfg_TickRate_Hz;        /* Determine nbr SysTick increments                     */
+   \   00000014   0x....             LDR.N    R0,??DataTable1_3
+   \   00000016   0x6800             LDR      R0,[R0, #+0]
+   \   00000018   0xFBB5 0xF0F0      UDIV     R0,R5,R0
+   \   0000001C   0x0006             MOVS     R6,R0
+    146              OS_CPU_SysTickInit(cnts);                                   /* Init uC/OS periodic time src (SysTick).              */
+   \   0000001E   0x0030             MOVS     R0,R6
+   \   00000020   0x.... 0x....      BL       OS_CPU_SysTickInit
+    147          
+    148              Mem_Init();                                                 /* Initialize Memory Management Module                  */
+   \   00000024   0x.... 0x....      BL       Mem_Init
+    149          
+    150          #if OS_CFG_STAT_TASK_EN > 0u
+    151              OSStatTaskCPUUsageInit(&err);                               /* Compute CPU capacity with no task running            */
+   \   00000028   0xA802             ADD      R0,SP,#+8
+   \   0000002A   0x.... 0x....      BL       OSStatTaskCPUUsageInit
+    152          #endif
+    153          
+    154              CPU_IntDisMeasMaxCurReset();
+   \   0000002E   0x.... 0x....      BL       CPU_IntDisMeasMaxCurReset
+    155          
+    156          #if (APP_CFG_SERIAL_EN == DEF_ENABLED)
+    157              BSP_Ser_Init(115200);                                       /* Enable Serial Interface                              */
+   \   00000032   0xF45F 0x30E1      MOVS     R0,#+115200
+   \   00000036   0x.... 0x....      BL       BSP_Ser_Init
+    158          #endif
+    159              
+    160              APP_TRACE_INFO(("Creating Application Tasks...\n\r"));
+   \   0000003A   0x....             LDR.N    R0,??DataTable1_4
+   \   0000003C   0x.... 0x....      BL       BSP_Ser_Printf
+    161              AppTaskCreate();                                            /* Create Application Tasks                             */
+   \   00000040   0x.... 0x....      BL       AppTaskCreate
+    162              
+    163              APP_TRACE_INFO(("Creating Application Events...\n\r"));
+   \   00000044   0x....             LDR.N    R0,??DataTable1_5
+   \   00000046   0x.... 0x....      BL       BSP_Ser_Printf
+    164              AppObjCreate();                                             /* Create Application Objects                           */
+   \   0000004A   0x.... 0x....      BL       AppObjCreate
+    165              
+    166              BSP_LED_Off(0);
+   \   0000004E   0x2000             MOVS     R0,#+0
+   \   00000050   0x.... 0x....      BL       BSP_LED_Off
+    167          
+    168              while (DEF_TRUE) {                                          /* Task body, always written as an infinite loop.       */
+    169                  BSP_LED_Toggle(0);
+   \                     ??AppTaskStart_0: (+1)
+   \   00000054   0x2000             MOVS     R0,#+0
+   \   00000056   0x.... 0x....      BL       BSP_LED_Toggle
+    170                  OSTimeDlyHMSM(0, 0, 0, 100,
+    171                                OS_OPT_TIME_HMSM_STRICT,
+    172                                &err);
+   \   0000005A   0xA802             ADD      R0,SP,#+8
+   \   0000005C   0x9001             STR      R0,[SP, #+4]
+   \   0000005E   0x2000             MOVS     R0,#+0
+   \   00000060   0x9000             STR      R0,[SP, #+0]
+   \   00000062   0x2364             MOVS     R3,#+100
+   \   00000064   0x2200             MOVS     R2,#+0
+   \   00000066   0x2100             MOVS     R1,#+0
+   \   00000068   0x2000             MOVS     R0,#+0
+   \   0000006A   0x.... 0x....      BL       OSTimeDlyHMSM
+   \   0000006E   0xE7F1             B.N      ??AppTaskStart_0
+    173              }
+    174          }
+    175          
+    176          
+    177          /*
+    178          *********************************************************************************************************
+    179          *                                      CREATE APPLICATION TASKS
+    180          *
+    181          * Description:  This function creates the application tasks.
+    182          *
+    183          * Arguments  :  none
+    184          *
+    185          * Returns    :  none
+    186          *********************************************************************************************************
+    187          */
+    188          
+
+   \                                 In section .text, align 2, keep-with-next
+    189          static  void  AppTaskCreate (void)
+    190          {
+    191          }
+   \                     AppTaskCreate: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    192          
+    193          
+    194          /*
+    195          *********************************************************************************************************
+    196          *                                      CREATE APPLICATION EVENTS
+    197          *
+    198          * Description:  This function creates the application kernel objects.
+    199          *
+    200          * Arguments  :  none
+    201          *
+    202          * Returns    :  none
+    203          *********************************************************************************************************
+    204          */
+    205          
+
+   \                                 In section .text, align 2, keep-with-next
+    206          static  void  AppObjCreate (void)
+    207          {
+    208          }
+   \                     AppObjCreate: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     AppTaskStartStk
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x........         DC32     ?_0
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x........         DC32     AppTaskStartTCB
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \   00000000   0x........         DC32     OSCfg_TickRate_Hz
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \   00000000   0x........         DC32     ?_1
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_5:
+   \   00000000   0x........         DC32     ?_2
+
+   \                                 In section .rodata, align 4
+   \                     ?_0:
+   \   00000000   0x41 0x70          DC8 "App Task Start"
+   \              0x70 0x20    
+   \              0x54 0x61    
+   \              0x73 0x6B    
+   \              0x20 0x53    
+   \              0x74 0x61    
+   \              0x72 0x74    
+   \              0x00         
+   \   0000000F   0x00               DC8 0
+
+   \                                 In section .rodata, align 4
+   \                     ?_1:
+   \   00000000   0x43 0x72          DC8 "Creating Application Tasks...\012\015"
+   \              0x65 0x61    
+   \              0x74 0x69    
+   \              0x6E 0x67    
+   \              0x20 0x41    
+   \              0x70 0x70    
+   \              0x6C 0x69    
+   \              0x63 0x61    
+   \              0x74 0x69    
+   \              0x6F 0x6E    
+   \              0x20 0x54    
+   \              0x61 0x73    
+   \              0x6B 0x73    
+   \              0x2E 0x2E    
+   \              0x2E 0x0A    
+   \              0x0D 0x00    
+
+   \                                 In section .rodata, align 4
+   \                     ?_2:
+   \   00000000   0x43 0x72          DC8 "Creating Application Events...\012\015"
+   \              0x65 0x61    
+   \              0x74 0x69    
+   \              0x6E 0x67    
+   \              0x20 0x41    
+   \              0x70 0x70    
+   \              0x6C 0x69    
+   \              0x63 0x61    
+   \              0x74 0x69    
+   \              0x6F 0x6E    
+   \              0x20 0x45    
+   \              0x76 0x65    
+   \              0x6E 0x74    
+   \              0x73 0x2E    
+   \              0x2E 0x2E    
+   \              0x0A 0x0D    
+   \              0x00         
+   \   00000021   0x00 0x00          DC8 0, 0, 0
+   \              0x00         
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       0   AppObjCreate
+       0   AppTaskCreate
+      32   AppTaskStart
+        32   -> AppObjCreate
+        32   -> AppTaskCreate
+        32   -> BSP_CPU_ClkFreq
+        32   -> BSP_Init
+        32   -> BSP_LED_Off
+        32   -> BSP_LED_Toggle
+        32   -> BSP_Ser_Init
+        32   -> BSP_Ser_Printf
+        32   -> CPU_Init
+        32   -> CPU_IntDisMeasMaxCurReset
+        32   -> Mem_Init
+        32   -> OSStatTaskCPUUsageInit
+        32   -> OSTimeDlyHMSM
+        32   -> OS_CPU_SysTickInit
+      48   main
+        48   -> BSP_IntDisAll
+        48   -> OSInit
+        48   -> OSStart
+        48   -> OSTaskCreate
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+      16  ?_0
+      32  ?_1
+      36  ?_2
+       2  AppObjCreate
+       2  AppTaskCreate
+     112  AppTaskStart
+     512  AppTaskStartStk
+     200  AppTaskStartTCB
+      76  main
+
+ 
+ 712 bytes in section .bss
+  84 bytes in section .rodata
+ 216 bytes in section .text
+ 
+ 216 bytes of CODE  memory
+  84 bytes of CONST memory
+ 712 bytes of DATA  memory
+
+Errors: none
+Warnings: none

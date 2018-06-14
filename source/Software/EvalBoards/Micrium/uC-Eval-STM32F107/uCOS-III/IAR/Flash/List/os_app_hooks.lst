@@ -1,0 +1,488 @@
+###############################################################################
+#
+# IAR ANSI C/C++ Compiler V7.50.1.10123/W32 for ARM       10/May/2018  08:55:41
+# Copyright 1999-2015 IAR Systems AB.
+#
+#    Cpu mode     =  thumb
+#    Endian       =  little
+#    Source file  =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\os_app_hooks.c
+#    Command line =  
+#        "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\os_app_hooks.c"
+#        -D USE_STDPERIPH_DRIVER -lCN "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List"
+#        -o "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj"
+#        --no_cse --no_unroll --no_inline --no_code_motion --no_tbaa
+#        --no_clustering --no_scheduling --debug --endian=little
+#        --cpu=Cortex-M3 -e --fpu=None --dlib_config "C:\Program Files
+#        (x86)\IAR Systems\Embedded Workbench
+#        7.3\arm\INC\c\DLib_Config_Normal.h" -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\uCOS-III\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\OS\uCOS-III\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\ST\STM32\inc\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\BSP\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-LIB\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uC-CPU\ARM-Cortex-M3\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Ports\ARM-Cortex-M3\Generic\IAR\"
+#        -I "F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\..\..\..\..\..\uCOS-III\Source\"
+#        -On --use_c++_inline
+#    List file    =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\List\os_app_hooks.lst
+#    Object file  =  
+#        F:\iar\001
+#        backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\IAR\Flash\Obj\os_app_hooks.o
+#
+###############################################################################
+
+F:\iar\001 backup\Micrium_uC-Eval-STM32F107_uCOS-III\Micrium\Software\EvalBoards\Micrium\uC-Eval-STM32F107\uCOS-III\os_app_hooks.c
+      1          /*
+      2          ************************************************************************************************************************
+      3          *                                                     uC/OS-III
+      4          *                                                The Real-Time Kernel
+      5          *
+      6          *                                  (c) Copyright 2009-2010; Micrium, Inc.; Weston, FL
+      7          *                          All rights reserved.  Protected by international copyright laws.
+      8          *
+      9          *                                                  APPLICATION HOOKS
+     10          *
+     11          * File    : OS_APP_HOOKS.C
+     12          * By      : JJL
+     13          * Version : V3.01.2
+     14          *
+     15          * LICENSING TERMS:
+     16          * ---------------
+     17          *               uC/OS-III is provided in source form to registered licensees ONLY.  It is 
+     18          *               illegal to distribute this source code to any third party unless you receive 
+     19          *               written permission by an authorized Micrium representative.  Knowledge of 
+     20          *               the source code may NOT be used to develop a similar product.
+     21          *
+     22          *               Please help us continue to provide the Embedded community with the finest
+     23          *               software available.  Your honesty is greatly appreciated.
+     24          *
+     25          *               You can contact us at www.micrium.com.
+     26          ************************************************************************************************************************
+     27          */
+     28          
+     29          #include <os.h>
+     30          #include <os_app_hooks.h>
+     31          
+     32          /*$PAGE*/
+     33          /*
+     34          ************************************************************************************************************************
+     35          *                                              SET ALL APPLICATION HOOKS
+     36          *
+     37          * Description: Set ALL application hooks.
+     38          *
+     39          * Arguments  : none.
+     40          *
+     41          * Note(s)    : none
+     42          ************************************************************************************************************************
+     43          */
+     44          
+
+   \                                 In section .text, align 2, keep-with-next
+     45          void  App_OS_SetAllHooks (void)
+     46          {
+   \                     App_OS_SetAllHooks: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+     47          #if OS_CFG_APP_HOOKS_EN > 0u
+     48              CPU_SR_ALLOC();
+   \   00000002   0x2400             MOVS     R4,#+0
+     49          
+     50          
+     51              CPU_CRITICAL_ENTER();
+   \   00000004   0x.... 0x....      BL       CPU_SR_Save
+   \   00000008   0x0004             MOVS     R4,R0
+   \   0000000A   0x.... 0x....      BL       CPU_IntDisMeasStart
+     52              OS_AppTaskCreateHookPtr = App_OS_TaskCreateHook;
+   \   0000000E   0x.... 0x....      ADR.W    R0,App_OS_TaskCreateHook
+   \   00000012   0x....             LDR.N    R1,??DataTable1
+   \   00000014   0x6008             STR      R0,[R1, #+0]
+     53              OS_AppTaskDelHookPtr    = App_OS_TaskDelHook;
+   \   00000016   0x.... 0x....      ADR.W    R0,App_OS_TaskDelHook
+   \   0000001A   0x....             LDR.N    R1,??DataTable1_1
+   \   0000001C   0x6008             STR      R0,[R1, #+0]
+     54              OS_AppTaskReturnHookPtr = App_OS_TaskReturnHook;
+   \   0000001E   0x.... 0x....      ADR.W    R0,App_OS_TaskReturnHook
+   \   00000022   0x....             LDR.N    R1,??DataTable1_2
+   \   00000024   0x6008             STR      R0,[R1, #+0]
+     55          
+     56              OS_AppIdleTaskHookPtr   = App_OS_IdleTaskHook;
+   \   00000026   0x.... 0x....      ADR.W    R0,App_OS_IdleTaskHook
+   \   0000002A   0x....             LDR.N    R1,??DataTable1_3
+   \   0000002C   0x6008             STR      R0,[R1, #+0]
+     57              OS_AppStatTaskHookPtr   = App_OS_StatTaskHook;
+   \   0000002E   0x.... 0x....      ADR.W    R0,App_OS_StatTaskHook
+   \   00000032   0x....             LDR.N    R1,??DataTable1_4
+   \   00000034   0x6008             STR      R0,[R1, #+0]
+     58              OS_AppTaskSwHookPtr     = App_OS_TaskSwHook;
+   \   00000036   0x.... 0x....      ADR.W    R0,App_OS_TaskSwHook
+   \   0000003A   0x....             LDR.N    R1,??DataTable1_5
+   \   0000003C   0x6008             STR      R0,[R1, #+0]
+     59              OS_AppTimeTickHookPtr   = App_OS_TimeTickHook;
+   \   0000003E   0x.... 0x....      ADR.W    R0,App_OS_TimeTickHook
+   \   00000042   0x....             LDR.N    R1,??DataTable1_6
+   \   00000044   0x6008             STR      R0,[R1, #+0]
+     60              CPU_CRITICAL_EXIT();
+   \   00000046   0x.... 0x....      BL       CPU_IntDisMeasStop
+   \   0000004A   0x0020             MOVS     R0,R4
+   \   0000004C   0x.... 0x....      BL       CPU_SR_Restore
+     61          #endif
+     62          }
+   \   00000050   0xBD10             POP      {R4,PC}          ;; return
+     63          
+     64          /*$PAGE*/
+     65          /*
+     66          ************************************************************************************************************************
+     67          *                                             CLEAR ALL APPLICATION HOOKS
+     68          *
+     69          * Description: Clear ALL application hooks.
+     70          *
+     71          * Arguments  : none.
+     72          *
+     73          * Note(s)    : none
+     74          ************************************************************************************************************************
+     75          */
+     76          
+
+   \                                 In section .text, align 2, keep-with-next
+     77          void  App_OS_ClrAllHooks (void)
+     78          {
+   \                     App_OS_ClrAllHooks: (+1)
+   \   00000000   0xB510             PUSH     {R4,LR}
+     79          #if OS_CFG_APP_HOOKS_EN > 0u
+     80              CPU_SR_ALLOC();
+   \   00000002   0x2400             MOVS     R4,#+0
+     81          
+     82          
+     83              CPU_CRITICAL_ENTER();
+   \   00000004   0x.... 0x....      BL       CPU_SR_Save
+   \   00000008   0x0004             MOVS     R4,R0
+   \   0000000A   0x.... 0x....      BL       CPU_IntDisMeasStart
+     84              OS_AppTaskCreateHookPtr = (OS_APP_HOOK_TCB)0;
+   \   0000000E   0x2000             MOVS     R0,#+0
+   \   00000010   0x....             LDR.N    R1,??DataTable1
+   \   00000012   0x6008             STR      R0,[R1, #+0]
+     85              OS_AppTaskDelHookPtr    = (OS_APP_HOOK_TCB)0;
+   \   00000014   0x2000             MOVS     R0,#+0
+   \   00000016   0x....             LDR.N    R1,??DataTable1_1
+   \   00000018   0x6008             STR      R0,[R1, #+0]
+     86              OS_AppTaskReturnHookPtr = (OS_APP_HOOK_TCB)0;
+   \   0000001A   0x2000             MOVS     R0,#+0
+   \   0000001C   0x....             LDR.N    R1,??DataTable1_2
+   \   0000001E   0x6008             STR      R0,[R1, #+0]
+     87          
+     88              OS_AppIdleTaskHookPtr   = (OS_APP_HOOK_VOID)0;
+   \   00000020   0x2000             MOVS     R0,#+0
+   \   00000022   0x....             LDR.N    R1,??DataTable1_3
+   \   00000024   0x6008             STR      R0,[R1, #+0]
+     89              OS_AppStatTaskHookPtr   = (OS_APP_HOOK_VOID)0;
+   \   00000026   0x2000             MOVS     R0,#+0
+   \   00000028   0x....             LDR.N    R1,??DataTable1_4
+   \   0000002A   0x6008             STR      R0,[R1, #+0]
+     90              OS_AppTaskSwHookPtr     = (OS_APP_HOOK_VOID)0;
+   \   0000002C   0x2000             MOVS     R0,#+0
+   \   0000002E   0x....             LDR.N    R1,??DataTable1_5
+   \   00000030   0x6008             STR      R0,[R1, #+0]
+     91              OS_AppTimeTickHookPtr   = (OS_APP_HOOK_VOID)0;
+   \   00000032   0x2000             MOVS     R0,#+0
+   \   00000034   0x....             LDR.N    R1,??DataTable1_6
+   \   00000036   0x6008             STR      R0,[R1, #+0]
+     92              CPU_CRITICAL_EXIT();
+   \   00000038   0x.... 0x....      BL       CPU_IntDisMeasStop
+   \   0000003C   0x0020             MOVS     R0,R4
+   \   0000003E   0x.... 0x....      BL       CPU_SR_Restore
+     93          #endif
+     94          }
+   \   00000042   0xBD10             POP      {R4,PC}          ;; return
+     95          
+     96          /*$PAGE*/
+     97          /*
+     98          ************************************************************************************************************************
+     99          *                                            APPLICATION TASK CREATION HOOK
+    100          *
+    101          * Description: This function is called when a task is created.
+    102          *
+    103          * Arguments  : p_tcb   is a pointer to the task control block of the task being created.
+    104          *
+    105          * Note(s)    : none
+    106          ************************************************************************************************************************
+    107          */
+    108          
+
+   \                                 In section .text, align 4, keep-with-next
+    109          void  App_OS_TaskCreateHook (OS_TCB  *p_tcb)
+    110          {
+   \                     App_OS_TaskCreateHook: (+1)
+   \   00000000   0xB401             PUSH     {R0}
+    111              (void)&p_tcb;
+   \   00000002   0x4668             MOV      R0,SP
+    112          }
+   \   00000004   0xB001             ADD      SP,SP,#+4
+   \   00000006   0x4770             BX       LR               ;; return
+    113          
+    114          /*$PAGE*/
+    115          /*
+    116          ************************************************************************************************************************
+    117          *                                            APPLICATION TASK DELETION HOOK
+    118          *
+    119          * Description: This function is called when a task is deleted.
+    120          *
+    121          * Arguments  : p_tcb   is a pointer to the task control block of the task being deleted.
+    122          *
+    123          * Note(s)    : none
+    124          ************************************************************************************************************************
+    125          */
+    126          
+
+   \                                 In section .text, align 4, keep-with-next
+    127          void  App_OS_TaskDelHook (OS_TCB  *p_tcb)
+    128          {
+   \                     App_OS_TaskDelHook: (+1)
+   \   00000000   0xB401             PUSH     {R0}
+    129              (void)&p_tcb;
+   \   00000002   0x4668             MOV      R0,SP
+    130          }
+   \   00000004   0xB001             ADD      SP,SP,#+4
+   \   00000006   0x4770             BX       LR               ;; return
+    131          
+    132          /*$PAGE*/
+    133          /*
+    134          ************************************************************************************************************************
+    135          *                                             APPLICATION TASK RETURN HOOK
+    136          *
+    137          * Description: This function is called if a task accidentally returns.  In other words, a task should either be an
+    138          *              infinite loop or delete itself when done.
+    139          *
+    140          * Arguments  : p_tcb     is a pointer to the OS_TCB of the task that is returning.
+    141          *
+    142          * Note(s)    : none
+    143          ************************************************************************************************************************
+    144          */
+    145          
+
+   \                                 In section .text, align 4, keep-with-next
+    146          void  App_OS_TaskReturnHook (OS_TCB  *p_tcb)
+    147          {
+   \                     App_OS_TaskReturnHook: (+1)
+   \   00000000   0xB401             PUSH     {R0}
+    148              (void)&p_tcb;
+   \   00000002   0x4668             MOV      R0,SP
+    149          }
+   \   00000004   0xB001             ADD      SP,SP,#+4
+   \   00000006   0x4770             BX       LR               ;; return
+    150          
+    151          /*$PAGE*/
+    152          /*
+    153          ************************************************************************************************************************
+    154          *                                              APPLICATION IDLE TASK HOOK
+    155          *
+    156          * Description: This function is called by the idle task.  This hook has been added to allow you to do such things as
+    157          *              STOP the CPU to conserve power.
+    158          *
+    159          * Arguments  : none
+    160          *
+    161          * Note(s)    : none
+    162          ************************************************************************************************************************
+    163          */
+    164          
+
+   \                                 In section .text, align 4, keep-with-next
+    165          void  App_OS_IdleTaskHook (void)
+    166          {
+    167          
+    168          }
+   \                     App_OS_IdleTaskHook: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    169          
+    170          /*$PAGE*/
+    171          /*
+    172          ************************************************************************************************************************
+    173          *                                          APPLICATION OS INITIALIZATION HOOK
+    174          *
+    175          * Description: This function is called by OSInit() at the beginning of OSInit().
+    176          *
+    177          * Arguments  : none
+    178          *
+    179          * Note(s)    : none
+    180          ************************************************************************************************************************
+    181          */
+    182          
+
+   \                                 In section .text, align 2, keep-with-next
+    183          void  App_OS_InitHook (void)
+    184          {
+    185          
+    186          }
+   \                     App_OS_InitHook: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    187          
+    188          /*$PAGE*/
+    189          /*
+    190          ************************************************************************************************************************
+    191          *                                           APPLICATION STATISTIC TASK HOOK
+    192          *
+    193          * Description: This function is called every second by uC/OS-III's statistics task.  This allows your application to add
+    194          *              functionality to the statistics task.
+    195          *
+    196          * Arguments  : none
+    197          *
+    198          * Note(s)    : none
+    199          ************************************************************************************************************************
+    200          */
+    201          
+
+   \                                 In section .text, align 4, keep-with-next
+    202          void  App_OS_StatTaskHook (void)
+    203          {
+    204          
+    205          }
+   \                     App_OS_StatTaskHook: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    206          
+    207          /*$PAGE*/
+    208          /*
+    209          ************************************************************************************************************************
+    210          *                                             APPLICATION TASK SWITCH HOOK
+    211          *
+    212          * Description: This function is called when a task switch is performed.  This allows you to perform other operations
+    213          *              during a context switch.
+    214          *
+    215          * Arguments  : none
+    216          *
+    217          * Note(s)    : 1) Interrupts are disabled during this call.
+    218          *              2) It is assumed that the global pointer 'OSTCBHighRdyPtr' points to the TCB of the task that will be
+    219          *                 'switched in' (i.e. the highest priority task) and, 'OSTCBCurPtr' points to the task being switched out
+    220          *                 (i.e. the preempted task).
+    221          ************************************************************************************************************************
+    222          */
+    223          
+
+   \                                 In section .text, align 4, keep-with-next
+    224          void  App_OS_TaskSwHook (void)
+    225          {
+    226          
+    227          }
+   \                     App_OS_TaskSwHook: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+    228          
+    229          /*$PAGE*/
+    230          /*
+    231          ************************************************************************************************************************
+    232          *                                                APPLICATION TICK HOOK
+    233          *
+    234          * Description: This function is called every tick.
+    235          *
+    236          * Arguments  : none
+    237          *
+    238          * Note(s)    : 1) This function is assumed to be called from the Tick ISR.
+    239          ************************************************************************************************************************
+    240          */
+    241          
+
+   \                                 In section .text, align 4, keep-with-next
+    242          void  App_OS_TimeTickHook (void)
+    243          {
+    244          
+    245          }
+   \                     App_OS_TimeTickHook: (+1)
+   \   00000000   0x4770             BX       LR               ;; return
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1:
+   \   00000000   0x........         DC32     OS_AppTaskCreateHookPtr
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_1:
+   \   00000000   0x........         DC32     OS_AppTaskDelHookPtr
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_2:
+   \   00000000   0x........         DC32     OS_AppTaskReturnHookPtr
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_3:
+   \   00000000   0x........         DC32     OS_AppIdleTaskHookPtr
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_4:
+   \   00000000   0x........         DC32     OS_AppStatTaskHookPtr
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_5:
+   \   00000000   0x........         DC32     OS_AppTaskSwHookPtr
+
+   \                                 In section .text, align 4, keep-with-next
+   \                     ??DataTable1_6:
+   \   00000000   0x........         DC32     OS_AppTimeTickHookPtr
+
+   Maximum stack usage in bytes:
+
+   .cstack Function
+   ------- --------
+       8   App_OS_ClrAllHooks
+         8   -> CPU_IntDisMeasStart
+         8   -> CPU_IntDisMeasStop
+         8   -> CPU_SR_Restore
+         8   -> CPU_SR_Save
+       0   App_OS_IdleTaskHook
+       0   App_OS_InitHook
+       8   App_OS_SetAllHooks
+         8   -> CPU_IntDisMeasStart
+         8   -> CPU_IntDisMeasStop
+         8   -> CPU_SR_Restore
+         8   -> CPU_SR_Save
+       0   App_OS_StatTaskHook
+       4   App_OS_TaskCreateHook
+       4   App_OS_TaskDelHook
+       4   App_OS_TaskReturnHook
+       0   App_OS_TaskSwHook
+       0   App_OS_TimeTickHook
+
+
+   Section sizes:
+
+   Bytes  Function/Label
+   -----  --------------
+       4  ??DataTable1
+       4  ??DataTable1_1
+       4  ??DataTable1_2
+       4  ??DataTable1_3
+       4  ??DataTable1_4
+       4  ??DataTable1_5
+       4  ??DataTable1_6
+      68  App_OS_ClrAllHooks
+       2  App_OS_IdleTaskHook
+       2  App_OS_InitHook
+      82  App_OS_SetAllHooks
+       2  App_OS_StatTaskHook
+       8  App_OS_TaskCreateHook
+       8  App_OS_TaskDelHook
+       8  App_OS_TaskReturnHook
+       2  App_OS_TaskSwHook
+       2  App_OS_TimeTickHook
+
+ 
+ 212 bytes in section .text
+ 
+ 212 bytes of CODE memory
+
+Errors: none
+Warnings: none
