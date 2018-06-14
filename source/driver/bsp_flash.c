@@ -340,16 +340,17 @@ u16     BSP_FlashWriteBytes     (u32 addr, u8 *pbuf, u16 len)
     /***********************************************
     * 描述： 检测地址是否会溢出，如果溢出则直接返回
     */
-    if ( (addr + len) > (FLASH_SIZE_EEP) )
+    if ( (addr + len) > (STM32_FLASH_BASE + FLASH_SIZE_EEP) )
         return 0;
 
     u16    copyLen;                                     // 要复制的长度
     u32    pageAddr;
     u16    size    = 0;                                 // 一次写入长度
-    u32 page    =   addr / STM_SECTOR_SIZE;             // 写入地址所在页（相对）
-                    addr    += PARAM_START_ADDR;        // 转换成绝对地址
+    u32    page    =   addr / STM_SECTOR_SIZE;             // 写入地址所在页（相对）
+    addr          += PARAM_START_ADDR;        // 转换成绝对地址
     
 	FLASH_Unlock();             				        // 上锁
+    
     /***********************************************
     * 描述： 非页首开始，读取之前数据进行填充
     */
@@ -414,8 +415,70 @@ u16     BSP_FlashWriteBytes     (u32 addr, u8 *pbuf, u16 len)
         BSP_FLASH_WritePage( pageAddr , (u8 *)FlashBuf.buf1 , STM_SECTOR_SIZE );
         bytes   += len;
     }
-
+    
 	FLASH_Lock();             				    // 上锁
+    return(bytes);
+}
+
+
+/*******************************************************************************
+* 名    称： BSP_FlashWriteBytes
+* 功    能： 写多个字节
+* 入口参数： addr： FLASH地址  pbuf ：写入字节的数组 len : 数组的大小
+* 出口参数： 0（操作有误），1（操作成功）
+* 作　 　者： wumingshen
+* 创建日期： 2015-10-20
+* 修    改：
+* 修改日期：
+* 备    注：
+*******************************************************************************/
+u16     BSP_FlashWriteBytes_Fast     (u32 addr, u8 *pbuf, u16 len)
+{
+    u16      bytes  = 0;
+    u16      *p     = (u16 *)pbuf;
+    u32      writeaddr;
+    /***********************************************
+    * 描述： 检测地址是否会溢出，如果溢出则直接返回
+    */
+    if ( (addr + len) > (STM32_FLASH_BASE + FLASH_SIZE_EEP) )
+        return 0;
+
+	FLASH_Unlock();             				        // 上锁
+    u32     i = 0;
+    
+    writeaddr = addr;
+    /*******************************************************************************
+    * Description  : 进入写操作前，判断数据是否跨扇区（跨越扇区需先擦除）
+    * Author       : 2018/5/15 星期二, by redmorningcn
+    *******************************************************************************/
+    for(i = 0;i < len;i++,i++)                                       
+    {
+        if((writeaddr&(STM_SECTOR_SIZE -1))==0)        //在块边界，需要擦除块
+        {
+            FLASH_ErasePage (writeaddr);                                
+        }
+        
+        s8  retrys = 5;
+    
+        do {
+            FLASH_ProgramHalfWord(writeaddr,*(u16 *)p);
+            if (*(u16 *)writeaddr == *(u16 *)p) {
+                break;
+            } else if ( 1 == retrys ) {
+                FLASH_Lock();             				                                // 上锁
+                return 0;
+            } 
+        } while ( --retrys );
+        
+        writeaddr    += 2;
+        p++;
+    }   
+
+    bytes = len;
+    
+	FLASH_Lock(); // 上锁
+            				                                
+    
     return(bytes);
 }
 

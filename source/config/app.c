@@ -69,7 +69,8 @@ void    InitCtrl(void)
 {
 //    Ctrl.sys.paraflg.sysflg    = 0;        //不存系统参数（sys）
 //    Ctrl.sys.paraflg.califlg   = 0;        //不存修正参数（cali）
-//    Ctrl.sys.sys_outtime       = 10;       //默认10个基本单位退出。 
+    Ctrl.sys.sys_outtime        = 10;       //默认10个基本单位退出。 
+    Ctrl.sys.loadflg            = 0;
     
     for(u8 i = 0;i <sizeof(Ctrl.ComCtrl)/sizeof(StrCOMCtrl);i++ )
     {
@@ -138,6 +139,8 @@ typedef void (*pFunction)(void);
 pFunction Jump_To_Application; 
 u32 JumpAddress;
 
+void __set_MSP(uint32_t topOfMainStack);
+void __set_PSP(uint32_t topOfProcStack);
 
 /*******************************************************************************
  * 名    称： IAP_JumpTo()
@@ -178,16 +181,14 @@ extern  void    back_to_app(void);
 */
 void    boot_out(void)
 {
-    IAP_JumpTo(USER_APP_START_ADDR);
-
     static  u32 time;
-    if(Ctrl.sys.time > time+1000 ||  Ctrl.sys.time < time)  //100ms
+    if(Ctrl.sys.time > time+1000 ||  Ctrl.sys.time < time || Ctrl.sys.loadflg == 1)  //100ms
     {
         time = Ctrl.sys.time;
         Ctrl.sys.sys_outtime--;
-        if(Ctrl.sys.sys_outtime == 0){
+        if(Ctrl.sys.sys_outtime == 0 || Ctrl.sys.loadflg == 1){
             
-            back_to_app();                                  //将back区数据copy到APP区
+            back_to_app();          //将back区数据copy到APP区
             
             /**************************************************************
             * Description  : 启动看门狗，准备跳转
@@ -197,8 +198,6 @@ void    boot_out(void)
         }
     }
 }
-
-
 
 extern  void mod_bus_rx_task(void);
 
@@ -215,12 +214,9 @@ extern  void mod_bus_rx_task(void);
 *********************************************************************************************************
 */
 
-int  main (void)
+ int  main (void)
 {
-
 	BSP_Init();                                                 /* Initialize BSP functions                             */
-    
-    //IAP_JumpTo(USER_APP_START_ADDR);
 
 	CPU_TS_TmrInit();
 
@@ -262,8 +258,6 @@ int  main (void)
         * Description  : bootout,下载退出程序
         * Author       : 2018/6/7 星期四, by redmorningcn
         */
-        //boot_out();
-        IAP_JumpTo(USER_APP_START_ADDR);
-
+        boot_out();
     }
 }

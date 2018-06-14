@@ -20,7 +20,8 @@
  * TYPEDEFS
  */
 
-     
+u16     BSP_FlashWriteBytes_Fast     (u32 addr, u8 *pbuf, u16 len);
+
 /**************************************************************
 * Description  : app_iap_deal  软件远程或串口升级
 * Author       : 2018/5/25 星期五, by redmorningcn
@@ -104,6 +105,15 @@ void    app_iap_deal(StrCOMCtrl  * DtuCom){
         //未发送改写程序，不存储更改后的sLocalIap值。
         sLocalIap.SwVer = softver;
         
+        
+        Chklen = (u32)&sLocalIap.Chk - (u32)&sLocalIap;
+        crc16 = GetCrc16Chk((uint8 *)&sLocalIap,Chklen);
+        sLocalIap.Chk = crc16;
+        
+        sLocalIap.storeCrc = GetCrc16Chk((uint8 *)&sLocalIap,sizeof(sLocalIap)-2);  //计算存储校验
+
+        BSP_FlashWriteBytes(IAP_PARA_START_ADDR,(uint8 *)&sLocalIap,sizeof(stcIAPPara));
+        
         time = Ctrl.sys.time;
         break;
     case IAP_DATA:                                          //IAP数据传输应答
@@ -132,9 +142,9 @@ void    app_iap_deal(StrCOMCtrl  * DtuCom){
         接收的idx和想接收的idx相同，接收正确。
         * Author       : 2018/5/28 星期一, by redmorningcn
         */
-        if(idx == sLocalIap.Idx)                        //序号相等，继续发送。
+         if(idx == sLocalIap.Idx)                        //序号相等，继续发送。
         {
-            BSP_FlashWriteBytes(sLocalIap.Addr,DtuCom->Rd.dtu.iap.buf,datalen); //将数据写入指定地址
+            BSP_FlashWriteBytes_Fast(sLocalIap.Addr,DtuCom->Rd.dtu.iap.buf,datalen); //将数据写入指定地址
             
             sLocalIap.Addr +=  datalen;
             
@@ -192,7 +202,8 @@ void    app_iap_deal(StrCOMCtrl  * DtuCom){
            ||   softsize  == DtuCom->Rd.dtu.iap.para.Size           //已写数据大小等于程序大小
            )    
         {
-            sLocalIap.End = 1;                                      //已经下载完成
+            sLocalIap.End       = 1;                                //已经下载完成
+            Ctrl.sys.loadflg    = 1;                                //下载完成
 
             /**************************************************************
             * Description  : 根据程序大小，确认是否下载为boot。
@@ -277,7 +288,7 @@ void    back_to_app(void)
         
         for(u32 i= 0;i< framnum ;i++){
             BSP_FlashReadBytes(backupaddr,Ctrl.ComCtrl[0].Rd.dtu.iap.buf,IAP_DATA_BUF_LEN);
-            BSP_FlashWriteBytes(appaddr,Ctrl.ComCtrl[0].Rd.dtu.iap.buf,IAP_DATA_BUF_LEN);
+            BSP_FlashWriteBytes_Fast(appaddr,Ctrl.ComCtrl[0].Rd.dtu.iap.buf,IAP_DATA_BUF_LEN);
             appaddr     += IAP_DATA_BUF_LEN;
             backupaddr  += IAP_DATA_BUF_LEN;
         }
@@ -291,6 +302,7 @@ void    back_to_app(void)
         sLocalIap.storeCrc = GetCrc16Chk((uint8 *)&sLocalIap,sizeof(sLocalIap)-2);  //计算存储校验
         
         BSP_FlashWriteBytes(IAP_PARA_START_ADDR,(uint8 *)&sLocalIap,sizeof(stcIAPPara));
+        
     }
 }
 

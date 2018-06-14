@@ -32,7 +32,8 @@ typedef struct
     }paraflg;
     
     u32     sys_outtime;
-    uint8   buf[59];        // 预留         8
+    u8      loadflg;        //下载完成
+    uint8   buf[58];        // 预留         8
     uint32  cpu_freq;       // cpu频率      72
     uint32  time;           // 系统全局时间(系统时钟(1/72Mhz) *65536)=约1ms   76
 }strSysPara;    

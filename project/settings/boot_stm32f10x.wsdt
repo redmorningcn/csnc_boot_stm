@@ -10,7 +10,7 @@
     <Static>
       <Workspace>
         <ColumnWidths>
-          <Column0>124</Column0>
+          <Column0>203</Column0>
           <Column1>27</Column1>
           <Column2>27</Column2>
           <Column3>27</Column3>
@@ -22,6 +22,13 @@
         <ColumnWidth2>359</ColumnWidth2>
         <ColumnWidth3>89</ColumnWidth3>
       </Build>
+      <TerminalIO/>
+      <Find-in-Files>
+        <ColumnWidth0>550</ColumnWidth0>
+        <ColumnWidth1>91</ColumnWidth1>
+        <ColumnWidth2>826</ColumnWidth2>
+        <ColumnWidth3>367</ColumnWidth3>
+      </Find-in-Files>
     </Static>
     <Windows>
       <Wnd2>
@@ -34,15 +41,18 @@
               <NodeDict>
                 <ExpandedNode>boot_stm32f10x</ExpandedNode>
                 <ExpandedNode>boot_stm32f10x/APP</ExpandedNode>
+                <ExpandedNode>boot_stm32f10x/APP/task</ExpandedNode>
+                <ExpandedNode>boot_stm32f10x/APP/user</ExpandedNode>
                 <ExpandedNode>boot_stm32f10x/BSP</ExpandedNode>
                 <ExpandedNode>boot_stm32f10x/BSP/ST</ExpandedNode>
+                <ExpandedNode>boot_stm32f10x/doc</ExpandedNode>
               </NodeDict>
             </Session>
           </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
       </Wnd2>
-      <Wnd0>
+      <Wnd3>
         <Tabs>
           <Tab>
             <Identity>TabID-9140-7487</Identity>
@@ -50,12 +60,210 @@
             <Factory>Build</Factory>
             <Session/>
           </Tab>
+          <Tab>
+            <Identity>TabID-14044-9610</Identity>
+            <TabName>Find in Files</TabName>
+            <Factory>Find-in-Files</Factory>
+            <Session/>
+          </Tab>
         </Tabs>
         <SelectedTab>0</SelectedTab>
-      </Wnd0>
+      </Wnd3>
     </Windows>
     <Editor>
       <Pane>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\doc\&#x5De5;&#x7A0B;&#x6587;&#x4eF6;&#x8BF4;&#x660e;.txt</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>15</YPos2>
+          <SelStart2>1341</SelStart2>
+          <SelEnd2>1341</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\bsp.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>173</YPos2>
+          <SelStart2>6659</SelStart2>
+          <SelEnd2>6659</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\user\CrcCheck.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>155</YPos2>
+          <SelStart2>9723</SelStart2>
+          <SelEnd2>9723</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\uC-MB\OS\uCOS-III\MB_OS.C</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>334</YPos2>
+          <SelStart2>12056</SelStart2>
+          <SelEnd2>12056</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\config\app_type.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>7</YPos2>
+          <SelStart2>1095</SelStart2>
+          <SelEnd2>1102</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\user\app_var.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>13</YPos2>
+          <SelStart2>0</SelStart2>
+          <SelEnd2>0</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\user\app_dtu_rec.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>48</YPos2>
+          <SelStart2>2643</SelStart2>
+          <SelEnd2>2643</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\user\app_task_com.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>35</YPos2>
+          <SelStart2>2811</SelStart2>
+          <SelEnd2>2811</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\ST\STM32\src\stm32f10x_flash.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>355</YPos2>
+          <SelStart2>13829</SelStart2>
+          <SelEnd2>13829</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\user\IAP_program_mcu.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>275</YPos2>
+          <SelStart2>13852</SelStart2>
+          <SelEnd2>13852</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\user\app_ModbusInit.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>280</YPos2>
+          <SelStart2>8087</SelStart2>
+          <SelEnd2>8087</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\driver\bsp_flash.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>453</YPos2>
+          <SelStart2>15799</SelStart2>
+          <SelEnd2>15799</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\driver\bsp_flash.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>15</YPos2>
+          <SelStart2>864</SelStart2>
+          <SelEnd2>864</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\user\IAP_program_mcu.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>42</YPos2>
+          <SelStart2>1208</SelStart2>
+          <SelEnd2>1208</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\IAR\STM32_FLASH.icf</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>0</YPos2>
+          <SelStart2>428</SelStart2>
+          <SelEnd2>486</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\ST\STM32\inc\stm32f10x_flash.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>179</YPos2>
+          <SelStart2>13594</SelStart2>
+          <SelEnd2>13621</SelEnd2>
+        </Tab>
         <Tab>
           <Factory>TextEditor</Factory>
           <Filename>$WS_DIR$\..\source\config\app.c</Filename>
@@ -64,11 +272,71 @@
           <SelStart>0</SelStart>
           <SelEnd>0</SelEnd>
           <XPos2>0</XPos2>
-          <YPos2>0</YPos2>
-          <SelStart2>1134</SelStart2>
-          <SelEnd2>1134</SelEnd2>
+          <YPos2>133</YPos2>
+          <SelStart2>7434</SelStart2>
+          <SelEnd2>7434</SelEnd2>
         </Tab>
-        <ActiveTab>0</ActiveTab>
+        <ActiveTab>16</ActiveTab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\IAR\cstartup.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>227</YPos2>
+          <SelStart2>15807</SelStart2>
+          <SelEnd2>15807</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\bsp_int.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>143</YPos2>
+          <SelStart2>5546</SelStart2>
+          <SelEnd2>5546</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\uC-CPU\ARM-Cortex-M3\IAR\cpu.h</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>353</YPos2>
+          <SelStart2>20352</SelStart2>
+          <SelEnd2>20352</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\uC-CPU\ARM-Cortex-M3\IAR\cpu_a.asm</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>51</YPos2>
+          <SelStart2>2968</SelStart2>
+          <SelEnd2>2968</SelEnd2>
+        </Tab>
+        <Tab>
+          <Factory>TextEditor</Factory>
+          <Filename>$WS_DIR$\..\source\Software\EvalBoards\Micrium\uC-Eval-STM32F107\BSP\core_cm3.c</Filename>
+          <XPos>0</XPos>
+          <YPos>0</YPos>
+          <SelStart>0</SelStart>
+          <SelEnd>0</SelEnd>
+          <XPos2>0</XPos2>
+          <YPos2>261</YPos2>
+          <SelStart2>9028</SelStart2>
+          <SelEnd2>9040</SelEnd2>
+        </Tab>
       </Pane>
       <ActivePane>0</ActivePane>
       <Sizes>
@@ -88,6 +356,9 @@
             </Toolbar-06080160>
           </Sizes>
         </Row0>
+        <Row1>
+          <Sizes/>
+        </Row1>
       </Top>
       <Left>
         <Row0>
@@ -97,14 +368,14 @@
                 <Top>-2</Top>
                 <Left>-2</Left>
                 <Bottom>794</Bottom>
-                <Right>198</Right>
+                <Right>294</Right>
                 <x>-2</x>
                 <y>-2</y>
                 <xscreen>200</xscreen>
                 <yscreen>200</yscreen>
                 <sizeHorzCX>107643</sizeHorzCX>
                 <sizeHorzCY>192864</sizeHorzCY>
-                <sizeVertCX>107643</sizeVertCX>
+                <sizeVertCX>159311</sizeVertCX>
                 <sizeVertCY>767599</sizeVertCY>
               </Rect>
             </Wnd2>
@@ -119,7 +390,7 @@
       <Bottom>
         <Row0>
           <Sizes>
-            <Wnd0>
+            <Wnd3>
               <Rect>
                 <Top>-2</Top>
                 <Left>-2</Left>
@@ -134,7 +405,7 @@
                 <sizeVertCX>107643</sizeVertCX>
                 <sizeVertCY>192864</sizeVertCY>
               </Rect>
-            </Wnd0>
+            </Wnd3>
           </Sizes>
         </Row0>
       </Bottom>

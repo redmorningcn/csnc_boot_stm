@@ -27,11 +27,14 @@
      
 #define  STM32_FLASH_BASE       0X08000000  // flash基地址
 
-#if STM32_FLASH_SIZE < 256
-#define STM_SECTOR_SIZE         1024        // 字节
-#else
-#define STM_SECTOR_SIZE	        2048        // 字节
-#endif
+
+#define STM_SECTOR_SIZE	        2048     
+     
+//#if STM32_FLASH_SIZE < 256
+//#define STM_SECTOR_SIZE         1024        // 字节
+//#else
+//#define STM_SECTOR_SIZE	        2048        // 字节
+//#endif
 
 #define KB						*1024
 
